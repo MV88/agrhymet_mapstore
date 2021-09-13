@@ -1,6 +1,5 @@
 const path = require("path");
 
-const themeEntries = require('./MapStore2/build/themes.js').themeEntries;
 const extractThemesPlugin = require('./MapStore2/build/themes.js').extractThemesPlugin;
 const ModuleFederationPlugin = require('./MapStore2/build/moduleFederation').plugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -12,21 +11,21 @@ const paths = {
     code: [path.join(__dirname, "js"), path.join(__dirname, "MapStore2", "web", "client")]
 };
 
-module.exports = require('./MapStore2/build/buildConfig')(
-    {
+module.exports = require('./MapStore2/build/buildConfig')({
+    bundles: {
         'agrhymet': path.join(__dirname, "js", "app"),
         'agrhymet-embedded': path.join(__dirname, "js", "embedded"),
         'agrhymet-api': path.join(__dirname, "MapStore2", "web", "client", "product", "api"),
         'geostory-embedded': path.join(__dirname, "js", "geostoryEmbedded"),
         "dashboard-embedded": path.join(__dirname, "js", "dashboardEmbedded")
     },
-    themeEntries,
+    themeEntries: {"themes/agrhymet": path.join(__dirname, "themes", "agrhymet", "theme.less")},
     paths,
-    [extractThemesPlugin, ModuleFederationPlugin],
-    true,
-    undefined,
-    '.agrhymet',
-    [
+    plugins: [extractThemesPlugin, ModuleFederationPlugin],
+    prod: true,
+    publicPath: "dist/",
+    cssPrefix: '.agrhymet',
+    prodPlugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, 'indexTemplate.html'),
             chunks: ['agrhymet'],
@@ -62,9 +61,10 @@ module.exports = require('./MapStore2/build/buildConfig')(
             filename: 'dashboard-embedded.html'
         })
     ],
-    {
+    alias: {
         "@mapstore/patcher": path.resolve(__dirname, "node_modules", "@mapstore", "patcher"),
         "@mapstore": path.resolve(__dirname, "MapStore2", "web", "client"),
         "@js": path.resolve(__dirname, "js")
-    }
-);
+    },
+    devServer: null
+});
