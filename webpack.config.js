@@ -11,7 +11,10 @@ module.exports = require('./MapStore2/build/buildConfig')(
         'geostory-embedded': path.join(__dirname, "js", "geostoryEmbedded"),
         "dashboard-embedded": path.join(__dirname, "js", "dashboardEmbedded")
     },
-    {"themes/agrhymet": path.join(__dirname, "themes", "agrhymet", "theme.less")},
+    {
+        "themes/agrhymet": path.join(__dirname, "themes", "agrhymet", "theme.less"),
+        "themes/dark": path.join(__dirname, "themes", "dark", "theme.less")
+    },
     {
         base: __dirname,
         dist: path.join(__dirname, "dist"),
