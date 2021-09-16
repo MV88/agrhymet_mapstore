@@ -1,6 +1,8 @@
 {
     "locale": "en-US",
     "messages": {
+        "mapCenter": "Map Center",
+        "mapViewInfo": "Map View Info",
         "home":{
             "shortDescription": "This is the agrhymet version",
             "footerDescription": "<strong>Agrhymet</strong> <a href=\"mailto:administration.agrhymet@cilss.int\">administration.agrhymet@cilss.int</a> <strong>TEL</strong> (227) 20.31.53.16 / 20.31.54.36"

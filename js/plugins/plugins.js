@@ -3,9 +3,9 @@
  */
 
 import SamplePlugin from "./SamplePlugin";
-/* import SamplePlugin2 from "./SamplePlugin2";*/
+import MapViewInfoPlugin from "./MapViewInfo";
 
 export default {
-    SamplePlugin/* ,
-    SamplePlugin2*/
+    SamplePlugin,
+    MapViewInfoPlugin
 };

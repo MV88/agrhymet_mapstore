@@ -257,6 +257,7 @@
             "FeedbackMask"
         ],
         "desktop": ["Details",
+          "MapViewInfo",
           {
             "name": "Map",
             "cfg": {
