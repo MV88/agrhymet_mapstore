@@ -42,6 +42,15 @@ module.exports = require('./MapStore2/build/buildConfig')(
         },
         '/agrhymet/pdf': {
             target: "http://localhost:8080/"
+        },
+        '/extensions.json': {
+            target: "http://localhost:8080/agrhymet"
+        },
+        '/dist/extensions': {
+            target: "http://localhost:8080/agrhymet"
+        },
+        '/pluginsConfig.json': {
+            target: "http://localhost:8080/agrhymet"
         }
     }
 );
