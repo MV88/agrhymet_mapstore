@@ -13,7 +13,8 @@ module.exports = require('./MapStore2/build/buildConfig')(
     },
     {
         "themes/agrhymet": path.join(__dirname, "themes", "agrhymet", "theme.less"),
-        "themes/dark": path.join(__dirname, "themes", "dark", "theme.less")
+        "themes/dark": path.join(__dirname, "themes", "dark", "theme.less"),
+        "themes/orange": path.join(__dirname, "themes", "orange", "theme.less")
     },
     {
         base: __dirname,

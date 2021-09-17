@@ -854,7 +854,34 @@
               "cfg": {
                   "documentationBaseURL": "https://mapstore.geosolutionsgroup.com/mapstore/docs/api/plugins",
                   "backToPageDestRoute": "/context-manager",
-                  "backToPageConfirmationMessage": "contextCreator.undo"
+                  "backToPageConfirmationMessage": "contextCreator.undo",
+                  "themes": [{
+                    "id": "orange",
+                    "type": "link",
+                    "href": "dist/themes/orange.css",
+                    "defaultVariables": {
+                        "ms-main-color": "#eeeeee",
+                        "ms-main-bg": "#0c2e15",
+                        "ms-primary-contrast": "#111111",
+                        "ms-primary": "#ff9843",
+                        "ms-success-contrast": "#111111",
+                        "ms-success": "#82df87"
+                    }
+                  },
+                  {
+                        "id": "dark",
+                        "type": "link",
+                        "href": "dist/themes/dark.css",
+                        "defaultVariables": {
+                          "ms-main-color": "#000000",
+                          "ms-main-bg": "#FFFFFF",
+                         "ms-primary-contrast": "#FFFFFF",
+                          "ms-primary": "#078aa3",
+                          "ms-success-contrast": "#FFFFFF",
+                          "ms-success": "#398439"
+                        }
+                   }
+                ]
               }
           },
           "Notifications",
