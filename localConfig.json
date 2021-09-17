@@ -257,7 +257,7 @@
             "FeedbackMask"
         ],
         "desktop": ["Details",
-          "MapViewInfo",
+          { "name": "MapViewBoundsInfo" },
           {
             "name": "Map",
             "cfg": {
@@ -283,7 +283,7 @@
                 }
               }
             }
-          }, "Sample", "AutoMapUpdate", "HelpLink", "DrawerMenu", "Version", "Notifications", "BackgroundSelector", "Swipe", {
+          }, "AutoMapUpdate", "HelpLink", "DrawerMenu", "Version", "Notifications", "BackgroundSelector", "Swipe", {
             "name": "Annotations",
             "cfg": {
               "measurementAnnotationEdit": false
